@@ -1,0 +1,30 @@
+server:
+  port: 8080
+spring:
+  application:
+    name: Rest Service
+  security:
+    username: akash
+    password: akash
+    role: ADMIN
+  datasource:
+    url: jdbc:h2:mem:testdb
+    driver-class-name: org.h2.Driver
+    username: sa
+    password: password
+    database-platform: org.hibernate.dialect.H2Dialect
+    testWhileIdle: true
+    validationQuery: SELECT 1
+  jpa:
+    show-sql: true
+    hibernate:
+      ddl-auto: update
+      naming-strategy: org.hibernate.cfg.ImprovedNamingStrategy
+logging:
+  file: logs/blaze-demo-api.log
+info:
+  build:
+    artifact: blaze-demo-api
+    name: BlazeDemoAPI
+    description: Api for blaze-demo app
+    version: 1.0
